@@ -5,18 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <section class="container">
-    <h1>To Do List</h1>
-    <div class="enter-item">
-      <input type="text" placeholder="Add to your list...">
-    </div>
-    <ul class="list-items">
-      <li><input type="checkbox"> Sample 1</li>
-      <li><input type="checkbox"> Sample 2</li>
-    </ul>
-    <div class="clear-completed"><a href="">Clear all completed</a></div>
+    <i class="fa-thin fa-do-not-enter"></i>
+    <article class="to-do-list">
+      <h1 class="common-padding">To Do List<span class="material-symbols-outlined">
+        autorenew
+        </span></h1>
+      <div class="common-padding">
+        <input class="enter-item" type="text" placeholder="Add to your list...">
+        <span class="material-symbols-outlined">
+          subdirectory_arrow_left
+          </span>
+      </div>
+      <ul class="list-items">
+        <li class="common-padding"><div><input type="checkbox"> Sample 1</div>
+          <span class="material-symbols-outlined">
+          more_vert
+          </span></li>
+        <li class="common-padding"><div><input type="checkbox"> Sample 2</div>
+          <span class="material-symbols-outlined">
+          more_vert
+          </span></li>
+      </ul>
+      <div class="clear-completed"><a href="">Clear all completed</a></div>
+    </article>
   </section>
 </body>
 </html>
