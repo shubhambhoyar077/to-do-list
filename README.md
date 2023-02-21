@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h1><b>Game Developer Conference</b></h1>
+  <h1><b>To Do List</b></h1>
 
 </div>
 
@@ -32,10 +32,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Game Developer Conference] <a name="about-project"></a>
+# 📖 [To Do List] <a name="about-project"></a>
 
-**[GDC]** is a first capstone by Microverse. Topic for this project is Game Developer 
-conference 2023. Check my [Project presentation](https://drive.google.com/file/d/1wQ7dPiQZKHEvNE76p5My9gJy7k5pXXGP/view?usp=sharing)
+**[To Do List]** is created using html, css, js and webpack. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -77,7 +76,7 @@ conference 2023. Check my [Project presentation](https://drive.google.com/file/d
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://shubhambhoyar077.github.io/gdc_capstone/)
+- [Live Demo not available]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +92,7 @@ In order to run this project you need: any web-browser.
 
 ### Setup
 
-Clone this [repository](https://github.com/shubhambhoyar077/gdc_capstone) to your desired folder.
+Clone this [repository](https://github.com/shubhambhoyar077/to-do-list) to your desired folder.
 
 ### Install
 
@@ -101,7 +100,11 @@ This project does not require installation.
 
 ### Usage
 
-To run the project, open index.html in any web browser.
+**To run the project follow the following instruction:-**
+
+- Clone this [repository](https://github.com/shubhambhoyar077/to-do-list) in your local machine with correct branch.
+- Terminal:- **npm run build** it will create **dist** folder. In that folder you have open index.html in any browser.
+- **or** Terminal:- **npm start** it will run on port 8080.
 
 ### Run tests
 
@@ -119,7 +122,7 @@ You can deploy this project using: Project is incomplete.
 
 👤 **Shubham Bhoyar**
 
-- GitHub: [@shubhambhoyar077]
+- GitHub: [@shubhambhoyar077](https://github.com/shubhambhoyar077)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,8 +131,8 @@ You can deploy this project using: Project is incomplete.
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[Support any device resolution]**
-- [ ] **[Rigister page]**
-- [ ] **[News page]**
+- [ ] **[CRUD functionality]**
+- [ ] **[Complete task check]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,7 +158,7 @@ If you like this project give a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Cindy Shin in Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) and Microverse.
+I would like to thank Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
