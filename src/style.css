@@ -10,7 +10,7 @@ a{
   text-decoration: none;
 }
 .common-padding{
-  padding: 0 40px 0 1rem;
+  padding: 0 1rem 0 1rem;
   height: 50px;
   line-height: 50px;
   display: flex;
@@ -47,7 +47,7 @@ a{
   outline: none;
 }
 .clear-completed{
-  padding: 0 40px 0 1rem;
+  padding: 0 1rem 0 1rem;
   height: 50px;
   line-height: 50px;
   text-align: center;
@@ -65,4 +65,8 @@ a{
 .material-symbols-outlined{
   color: #9d9c9c;
   cursor: pointer;
+}
+
+.move-item{
+  cursor:move;
 }
