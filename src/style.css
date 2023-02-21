@@ -1,3 +1,68 @@
-body {
-  background-color: red;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.common-padding{
+  padding: 0 40px 0 1rem;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  padding: 0 15%;
+}
+
+.to-do-list{
+  background-color: white;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  /* padding: 0 2%; */
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px rgb(163, 163, 163);
+}
+.enter-item{
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-style: italic;
+  line-height: 50px;
+}
+.enter-item:focus{
+  outline: none;
+}
+.clear-completed{
+  padding: 0 40px 0 1rem;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.clear-completed a{
+  color: #9d9c9c;
+}
+
+.clear-completed a:hover{
+  color: black;
+  border-bottom: 1px solid black;
+}
+.material-symbols-outlined{
+  color: #9d9c9c;
+  cursor: pointer;
 }
