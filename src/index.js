@@ -35,6 +35,7 @@ let toDoList = [
 
 
 const addItem = document.getElementById('enter-item');
+const addItemBtn = document.getElementById('add-item');
 const new_todo_list = new ToDoList(toDoList);
 new_todo_list.displayList();
 
@@ -46,6 +47,14 @@ addItem.addEventListener('keypress', (event) => {
     }
     addItem.value = "";
   }
+});
+
+addItemBtn.addEventListener('click', (event) => {
+    if(event.target.previousElementSibling.value){
+      new_todo_list.addItem(event.target.previousElementSibling.value);
+    }
+    addItem.value = "";
+    console.log(toDoList);
 });
 
 const ulList = document.getElementById('list-items');
