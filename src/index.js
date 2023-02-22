@@ -39,8 +39,16 @@ ulList.addEventListener('click', (event) => {
 });
 
 ulList.addEventListener('blur', (event) => {
-  updateUi(event);
-  newToDoList.updateItem(event.target.parentNode.id, event.target.value);
+  if (event.target.id === 'edit') {
+    updateUi(event);
+    newToDoList.updateItem(event.target.parentNode.id, event.target.value);
+  }
 }, true);
+
+// ulList.addEventListener('change', (event) => {
+//   if(event.target.id === "checkbox"){
+//     console.log(event.target.value);
+//   }
+// });
 
 showDate();

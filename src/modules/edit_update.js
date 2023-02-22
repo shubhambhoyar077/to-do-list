@@ -18,7 +18,6 @@ const editUi = (event) => {
 };
 
 const updateUi = (event) => {
-  if (event.target.id === 'edit') {
     const li = event.target.parentNode.parentNode;
     li.style.background = '';
     event.target.classList.add('disable');
@@ -34,7 +33,6 @@ const updateUi = (event) => {
         element.classList.add('disable');
       }
     });
-  }
 };
 
 export { editUi, updateUi };
