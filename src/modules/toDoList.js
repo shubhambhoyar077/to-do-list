@@ -53,7 +53,6 @@ export default class ToDoList {
     this.updateIndex();
     ulList.innerHTML = '';
     this.displayList();
-    console.log(this.toDoList);
   }
 
   restoreList() {
