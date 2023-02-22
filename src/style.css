@@ -13,11 +13,12 @@ a {
 
 .common-padding {
   padding: 0 1rem 0 1rem;
-  height: 50px;
+  min-height: 50px;
   line-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #9d9c9c;
 }
 
 .container {
@@ -104,6 +105,7 @@ a {
 }
 
 #showDate{
+  color: #9d9c9c;
   font-size: 12px;
   font-weight: 100;
 }
