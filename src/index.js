@@ -1,5 +1,6 @@
 import './style.css';
 import ToDoList from './modules/toDoList';
+import showDate from './modules/dateTime';
 
 let toDoList = [
   {
@@ -89,3 +90,5 @@ ulList.addEventListener('blur', (event) => {
     new_list.updateItem(index, event.target.value);
   }
 }, true);
+
+showDate();

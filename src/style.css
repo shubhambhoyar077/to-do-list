@@ -102,3 +102,8 @@ a {
   border: none;
   outline: none;
 }
+
+#showDate{
+  font-size: 12px;
+  font-weight: 100;
+}
