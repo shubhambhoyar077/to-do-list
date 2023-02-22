@@ -67,9 +67,11 @@ ulList.addEventListener('click', (event) => {
 ulList.addEventListener('blur', (event) => {
   if(event.target.id === "edit"){
     const li = event.target.parentNode.parentNode;
+    const index = event.target.parentNode.id;
     li.style.background = "";
     event.target.classList.add('disable');
     event.target.previousElementSibling.classList.remove('disable');
+    event.target.previousElementSibling.textContent = event.target.value;
     [...li.children].map(element => {
       if(element.id === 'move'){
         element.classList.remove('disable');
@@ -78,5 +80,6 @@ ulList.addEventListener('blur', (event) => {
         element.classList.add('disable');
       }
     });
+    new_list.updateItem(index, event.target.value);
   }
 }, true);
