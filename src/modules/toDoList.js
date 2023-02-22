@@ -11,11 +11,14 @@ export default class ToDoList{
   }
   addItem(description){
     const new_item = {
-      index: this.addItem.length,
+      index: this.toDoList.length,
       description: description,
       completed: false,
     };
     renderList(new_item);
     this.toDoList.push(new_item);
+  }
+  updateItem(index, updateDescription){
+    this.toDoList[index].description = updateDescription;
   }
 }
