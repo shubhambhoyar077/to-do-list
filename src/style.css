@@ -81,16 +81,16 @@ a {
   cursor: move;
 }
 
-.disable{
-  display:none;
+.disable {
+  display: none;
 }
 
-.view{
+.view {
   width: 100%;
   padding-left: 4px;
 }
 
-.view #edit{
+.view #edit {
   width: 100%;
   height: 100%;
   font-style: italic;
@@ -99,12 +99,12 @@ a {
   background-color: yellowgreen;
 }
 
-.view #edit:focus{
+.view #edit:focus {
   border: none;
   outline: none;
 }
 
-#showDate{
+#showDate {
   color: #9d9c9c;
   font-size: 12px;
   font-weight: 100;
