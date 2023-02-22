@@ -15,7 +15,7 @@ const renderList = (listItem) => {
             <span id='move' class="material-symbols-outlined move-item">
               more_vert
             </span>
-            <span class="material-symbols-outlined disable">
+            <span id='update' class="material-symbols-outlined disable">
           subdirectory_arrow_left
           </span>
           </li>`;

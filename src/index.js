@@ -61,6 +61,9 @@ ulList.addEventListener('click', (event) => {
       else if(element.id === 'delete'){
         element.classList.add('disable');
       }
+      else if(element.id === 'update'){
+        element.classList.remove('disable');
+      }
     });
   }
   if(event.target.id === 'delete'){
@@ -85,6 +88,9 @@ ulList.addEventListener('blur', (event) => {
       }
       else if(element.id === 'delete'){
         element.classList.remove('disable');
+      }
+      else if(element.id === 'update'){
+        element.classList.add('disable');
       }
     });
     new_list.updateItem(index, event.target.value);
