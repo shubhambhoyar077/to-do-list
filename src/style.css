@@ -109,3 +109,7 @@ a {
   font-size: 12px;
   font-weight: 100;
 }
+
+.completed{
+  text-decoration: line-through;
+}
