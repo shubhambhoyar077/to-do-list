@@ -23,6 +23,7 @@ export default class ToDoList{
   }
   deleteItem(index){
     this.toDoList.splice(index, 1);
+    this.updateIndex();
     ulList.innerHTML = "";
     this.displayList();
   }
