@@ -35,13 +35,13 @@ let toDoList = [
 
 
 const addItem = document.getElementById('enter-item');
-const new_list = new ToDoList(toDoList);
-new_list.displayList();
+const new_todo_list = new ToDoList(toDoList);
+new_todo_list.displayList();
 
 addItem.addEventListener('keypress', (event) => {
   if(event.key === 'Enter'){
     event.preventDefault();
-    new_list.addItem(addItem.value);
+    new_todo_list.addItem(addItem.value);
   }
 });
 
@@ -54,13 +54,13 @@ ulList.addEventListener('click', (event) => {
   if(event.target.id === 'delete'){
     const li = event.target.parentNode;
     const index = li.querySelector('.view').id;
-    new_list.deleteItem(index);
+    new_todo_list.deleteItem(index);
   }
 });
 
 ulList.addEventListener('blur', (event) => {
   updateUi(event);
-  new_list.updateItem(event.target.parentNode.id, event.target.value);
+  new_todo_list.updateItem(event.target.parentNode.id, event.target.value);
 }, true);
 
 showDate();
