@@ -15,7 +15,7 @@ export default class ToDoList {
 
   addItem(description) {
     const newItem = {
-      index: this.toDoList.length+1,
+      index: this.toDoList.length + 1,
       description,
       completed: false,
     };
@@ -41,7 +41,7 @@ export default class ToDoList {
 
   updateIndex() {
     this.toDoList.forEach((element, index) => {
-      element.index = index+1;
+      element.index = index + 1;
     });
     this.updateLocalStorage();
   }

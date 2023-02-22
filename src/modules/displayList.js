@@ -4,7 +4,7 @@ const renderList = (listItem) => {
   ulList.innerHTML += `
           <li class="common-padding">
             <input type="checkbox">
-            <div class="view" id="${listItem.index-1}">
+            <div class="view" id="${listItem.index - 1}">
                 <label id="label">${listItem.description}</label>
                 <input type="text" id="edit" class="disable">
             </div>

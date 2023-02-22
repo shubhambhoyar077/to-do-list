@@ -3,7 +3,6 @@ import ToDoList from './modules/toDoList';
 import showDate from './modules/dateTime';
 import { editUi, updateUi } from './modules/edit_update';
 
-
 const addItem = document.getElementById('enter-item');
 const addItemBtn = document.getElementById('add-item');
 const newToDoList = new ToDoList();
@@ -17,7 +16,6 @@ addItem.addEventListener('keypress', (event) => {
     }
     addItem.value = '';
   }
-  
 });
 
 addItemBtn.addEventListener('click', (event) => {
