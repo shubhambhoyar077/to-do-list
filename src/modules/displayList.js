@@ -9,13 +9,16 @@ const renderList = (listItem) => {
                 <label id="label">${listItem.description}</label>
                 <input type="text" id="edit" class="disable">
             </div>
+            <span id='delete' class="material-symbols-outlined">
+              delete
+            </span>
             <span id='move' class="material-symbols-outlined move-item">
               more_vert
             </span>
-            <span id='delete' class="material-symbols-outlined disable">
-              delete
-            </span>
+            <span class="material-symbols-outlined disable">
+          subdirectory_arrow_left
+          </span>
           </li>`;
 };
 
-export default renderList;
+export {renderList, ulList};
