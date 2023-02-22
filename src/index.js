@@ -58,10 +58,16 @@ ulList.addEventListener('click', (event) => {
         element.classList.add('disable');
       }
       else if(element.id === 'delete'){
-        element.classList.remove('disable');
+        element.classList.add('disable');
       }
     });
   }
+  if(event.target.id === 'delete'){
+    const li = event.target.parentNode;
+    const index = li.querySelector('.view').id;
+    new_list.deleteItem(index);
+  }
+  
 });
 
 ulList.addEventListener('blur', (event) => {
@@ -77,7 +83,7 @@ ulList.addEventListener('blur', (event) => {
         element.classList.remove('disable');
       }
       else if(element.id === 'delete'){
-        element.classList.add('disable');
+        element.classList.remove('disable');
       }
     });
     new_list.updateItem(index, event.target.value);
