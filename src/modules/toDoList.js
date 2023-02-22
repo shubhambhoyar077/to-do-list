@@ -1,4 +1,4 @@
-import renderList from './displayList';
+import {renderList, ulList} from './displayList';
 
 export default class ToDoList{
   constructor(toDoList){
@@ -20,5 +20,15 @@ export default class ToDoList{
   }
   updateItem(index, updateDescription){
     this.toDoList[index].description = updateDescription;
+  }
+  deleteItem(index){
+    this.toDoList.splice(index, 1);
+    ulList.innerHTML = "";
+    this.displayList();
+  }
+  updateIndex(){
+    this.toDoList.forEach((element, index) => {
+      element.index = index;
+    });
   }
 }
