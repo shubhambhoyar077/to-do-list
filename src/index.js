@@ -3,12 +3,10 @@ import ToDoList from './modules/toDoList';
 import showDate from './modules/dateTime';
 import { editUi, updateUi } from './modules/edit_update';
 
-const toDoList = [
-];
 
 const addItem = document.getElementById('enter-item');
 const addItemBtn = document.getElementById('add-item');
-const newToDoList = new ToDoList(toDoList);
+const newToDoList = new ToDoList();
 newToDoList.restoreList();
 
 addItem.addEventListener('keypress', (event) => {
@@ -19,6 +17,7 @@ addItem.addEventListener('keypress', (event) => {
     }
     addItem.value = '';
   }
+  
 });
 
 addItemBtn.addEventListener('click', (event) => {
@@ -26,7 +25,6 @@ addItemBtn.addEventListener('click', (event) => {
     newToDoList.addItem(event.target.previousElementSibling.value);
   }
   addItem.value = '';
-  console.log(toDoList);
 });
 
 const ulList = document.getElementById('list-items');

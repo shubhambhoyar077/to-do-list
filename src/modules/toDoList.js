@@ -2,9 +2,9 @@ import { renderList, ulList } from './displayList';
 import Storage from './storage';
 
 export default class ToDoList {
-  constructor(toDoList) {
+  constructor() {
     this.storage = new Storage();
-    this.toDoList = toDoList;
+    this.toDoList = [];
   }
 
   displayList() {
@@ -15,18 +15,20 @@ export default class ToDoList {
 
   addItem(description) {
     const newItem = {
-      index: this.toDoList.length,
+      index: this.toDoList.length+1,
       description,
       completed: false,
     };
     renderList(newItem);
     this.toDoList.push(newItem);
     this.updateLocalStorage();
+    console.log(this.toDoList);
   }
 
   updateItem(index, updateDescription) {
     this.toDoList[index].description = updateDescription;
     this.updateLocalStorage();
+    console.log(this.toDoList);
   }
 
   deleteItem(index) {
@@ -34,11 +36,12 @@ export default class ToDoList {
     this.updateIndex();
     ulList.innerHTML = '';
     this.displayList();
+    console.log(this.toDoList);
   }
 
   updateIndex() {
     this.toDoList.forEach((element, index) => {
-      element.index = index;
+      element.index = index+1;
     });
     this.updateLocalStorage();
   }
