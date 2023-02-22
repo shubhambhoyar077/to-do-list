@@ -1,11 +1,17 @@
 const ulList = document.getElementById('list-items');
 
 const renderList = (listItem) => {
+  let completedCls = '';
+  let checkbox = '';
+  if(listItem.completed){
+    completedCls = "class='completed'";
+    checkbox = 'checked';
+  }
   ulList.innerHTML += `
           <li class="common-padding">
-            <input type="checkbox">
+            <input id='checkbox' type="checkbox" ${checkbox}>
             <div class="view" id="${listItem.index - 1}">
-                <label id="label">${listItem.description}</label>
+                <label id="label" ${completedCls}>${listItem.description}</label>
                 <input type="text" id="edit" class="disable">
             </div>
             <span id='delete' class="material-symbols-outlined">
