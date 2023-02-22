@@ -48,7 +48,13 @@ export default class ToDoList {
     this.updateLocalStorage();
   }
 
-
+  clearCompleted(){
+    this.toDoList = this.toDoList.filter((element) => !element.completed);
+    this.updateIndex();
+    ulList.innerHTML = '';
+    this.displayList();
+    console.log(this.toDoList);
+  }
 
   restoreList() {
     if (!localStorage.getItem('todo_list')) {
