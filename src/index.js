@@ -2,6 +2,7 @@ import './style.css';
 import ToDoList from './modules/toDoList';
 import showDate from './modules/dateTime';
 import { editUi, updateUi } from './modules/edit_update';
+import setStatus from './modules/statusUpdate';
 
 const addItem = document.getElementById('enter-item');
 const addItemBtn = document.getElementById('add-item');
@@ -47,14 +48,8 @@ ulList.addEventListener('blur', (event) => {
 
 ulList.addEventListener('change', (event) => {
   if (event.target.id === 'checkbox') {
-    const view = event.target.nextElementSibling;
-    newToDoList.markComplited(view.id, event.target.checked);
-    const childrenList = [...view.children];
-    childrenList.forEach((element) => {
-      if (element.id === 'label') {
-        element.classList.toggle('completed');
-      }
-    });
+    const index = setStatus(event);
+    newToDoList.markComplited(index, event.target.checked);
   }
 });
 
