@@ -1,8 +1,7 @@
 const ulList = document.getElementById('list-items');
 
-
 const renderList = (listItem) => {
-    ulList.innerHTML += `
+  ulList.innerHTML += `
           <li class="common-padding">
             <input type="checkbox">
             <div class="view" id="${listItem.index}">
@@ -21,4 +20,4 @@ const renderList = (listItem) => {
           </li>`;
 };
 
-export {renderList, ulList};
+export { renderList, ulList };

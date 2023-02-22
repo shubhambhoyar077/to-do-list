@@ -1,37 +1,42 @@
-import {renderList, ulList} from './displayList';
+import { renderList, ulList } from './displayList';
 import Storage from './storage';
 
-export default class ToDoList{
-  constructor(toDoList){
+export default class ToDoList {
+  constructor(toDoList) {
     this.storage = new Storage();
     this.toDoList = toDoList;
   }
-  displayList(){
+
+  displayList() {
     this.toDoList.forEach((element) => {
       renderList(element);
     });
   }
-  addItem(description){
-    const new_item = {
+
+  addItem(description) {
+    const newItem = {
       index: this.toDoList.length,
-      description: description,
+      description,
       completed: false,
     };
-    renderList(new_item);
-    this.toDoList.push(new_item);
+    renderList(newItem);
+    this.toDoList.push(newItem);
     this.updateLocalStorage();
   }
-  updateItem(index, updateDescription){
+
+  updateItem(index, updateDescription) {
     this.toDoList[index].description = updateDescription;
     this.updateLocalStorage();
   }
-  deleteItem(index){
+
+  deleteItem(index) {
     this.toDoList.splice(index, 1);
     this.updateIndex();
-    ulList.innerHTML = "";
+    ulList.innerHTML = '';
     this.displayList();
   }
-  updateIndex(){
+
+  updateIndex() {
     this.toDoList.forEach((element, index) => {
       element.index = index;
     });
