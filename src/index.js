@@ -45,10 +45,17 @@ ulList.addEventListener('blur', (event) => {
   }
 }, true);
 
-// ulList.addEventListener('change', (event) => {
-//   if(event.target.id === "checkbox"){
-//     console.log(event.target.value);
-//   }
-// });
+ulList.addEventListener('change', (event) => {
+  if(event.target.id === "checkbox"){
+    const view  = event.target.nextElementSibling;
+    newToDoList.markComplited(view.id, event.target.checked);
+    const childrenList = [...view.children];
+    childrenList.forEach((element) => {
+      if(element.id === "label"){
+        element.classList.toggle('completed');
+      }
+    });
+  }
+});
 
 showDate();
