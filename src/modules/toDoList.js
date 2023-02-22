@@ -22,13 +22,11 @@ export default class ToDoList {
     renderList(newItem);
     this.toDoList.push(newItem);
     this.updateLocalStorage();
-    console.log(this.toDoList);
   }
 
   updateItem(index, updateDescription) {
     this.toDoList[index].description = updateDescription;
     this.updateLocalStorage();
-    console.log(this.toDoList);
   }
 
   deleteItem(index) {
@@ -36,7 +34,6 @@ export default class ToDoList {
     this.updateIndex();
     ulList.innerHTML = '';
     this.displayList();
-    console.log(this.toDoList);
   }
 
   updateIndex() {
