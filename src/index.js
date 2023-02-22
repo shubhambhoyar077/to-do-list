@@ -58,4 +58,10 @@ ulList.addEventListener('change', (event) => {
   }
 });
 
+const clearCompletedItem = document.getElementById('clear-completed');
+clearCompletedItem.addEventListener('click', (e) => {
+  e.preventDefault();
+  newToDoList.clearCompleted();
+})
+
 showDate();
