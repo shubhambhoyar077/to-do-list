@@ -43,12 +43,12 @@ export default class ToDoList {
     this.updateLocalStorage();
   }
 
-  markComplited(index, value){
+  markComplited(index, value) {
     this.toDoList[index].completed = value;
     this.updateLocalStorage();
   }
 
-  clearCompleted(){
+  clearCompleted() {
     this.toDoList = this.toDoList.filter((element) => !element.completed);
     this.updateIndex();
     ulList.innerHTML = '';

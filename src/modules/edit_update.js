@@ -18,21 +18,21 @@ const editUi = (event) => {
 };
 
 const updateUi = (event) => {
-    const li = event.target.parentNode.parentNode;
-    li.style.background = '';
-    event.target.classList.add('disable');
-    event.target.previousElementSibling.classList.remove('disable');
-    event.target.previousElementSibling.textContent = event.target.value;
-    const childrenList = [...li.children];
-    childrenList.forEach((element) => {
-      if (element.id === 'move') {
-        element.classList.remove('disable');
-      } else if (element.id === 'delete') {
-        element.classList.remove('disable');
-      } else if (element.id === 'update') {
-        element.classList.add('disable');
-      }
-    });
+  const li = event.target.parentNode.parentNode;
+  li.style.background = '';
+  event.target.classList.add('disable');
+  event.target.previousElementSibling.classList.remove('disable');
+  event.target.previousElementSibling.textContent = event.target.value;
+  const childrenList = [...li.children];
+  childrenList.forEach((element) => {
+    if (element.id === 'move') {
+      element.classList.remove('disable');
+    } else if (element.id === 'delete') {
+      element.classList.remove('disable');
+    } else if (element.id === 'update') {
+      element.classList.add('disable');
+    }
+  });
 };
 
 export { editUi, updateUi };

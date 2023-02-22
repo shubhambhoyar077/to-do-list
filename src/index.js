@@ -46,12 +46,12 @@ ulList.addEventListener('blur', (event) => {
 }, true);
 
 ulList.addEventListener('change', (event) => {
-  if(event.target.id === "checkbox"){
-    const view  = event.target.nextElementSibling;
+  if (event.target.id === 'checkbox') {
+    const view = event.target.nextElementSibling;
     newToDoList.markComplited(view.id, event.target.checked);
     const childrenList = [...view.children];
     childrenList.forEach((element) => {
-      if(element.id === "label"){
+      if (element.id === 'label') {
         element.classList.toggle('completed');
       }
     });
@@ -62,6 +62,6 @@ const clearCompletedItem = document.getElementById('clear-completed');
 clearCompletedItem.addEventListener('click', (e) => {
   e.preventDefault();
   newToDoList.clearCompleted();
-})
+});
 
 showDate();

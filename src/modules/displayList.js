@@ -3,7 +3,7 @@ const ulList = document.getElementById('list-items');
 const renderList = (listItem) => {
   let completedCls = '';
   let checkbox = '';
-  if(listItem.completed){
+  if (listItem.completed) {
     completedCls = "class='completed'";
     checkbox = 'checked';
   }
