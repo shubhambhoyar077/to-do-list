@@ -1,6 +1,7 @@
 import './style.css';
 import ToDoList from './modules/toDoList';
 import showDate from './modules/dateTime';
+import { editUi, updateUi } from './modules/edit_update';
 
 let toDoList = [
   {
@@ -48,53 +49,18 @@ const ulList = document.getElementById('list-items');
 
 ulList.addEventListener('click', (event) => {
   if(event.target.id === "label"){
-    const li = event.target.parentNode.parentNode;
-    li.style.background = "yellowgreen";
-    event.target.classList.add('disable');
-    event.target.nextElementSibling.classList.remove('disable');
-    event.target.nextElementSibling.value = event.target.textContent;
-    event.target.nextElementSibling.focus();
-    [...li.children].map(element => {
-      if(element.id === 'move'){
-        element.classList.add('disable');
-      }
-      else if(element.id === 'delete'){
-        element.classList.add('disable');
-      }
-      else if(element.id === 'update'){
-        element.classList.remove('disable');
-      }
-    });
+    editUi(event);
   }
   if(event.target.id === 'delete'){
     const li = event.target.parentNode;
     const index = li.querySelector('.view').id;
     new_list.deleteItem(index);
   }
-  
 });
 
 ulList.addEventListener('blur', (event) => {
-  if(event.target.id === "edit"){
-    const li = event.target.parentNode.parentNode;
-    const index = event.target.parentNode.id;
-    li.style.background = "";
-    event.target.classList.add('disable');
-    event.target.previousElementSibling.classList.remove('disable');
-    event.target.previousElementSibling.textContent = event.target.value;
-    [...li.children].map(element => {
-      if(element.id === 'move'){
-        element.classList.remove('disable');
-      }
-      else if(element.id === 'delete'){
-        element.classList.remove('disable');
-      }
-      else if(element.id === 'update'){
-        element.classList.add('disable');
-      }
-    });
-    new_list.updateItem(index, event.target.value);
-  }
+  updateUi(event);
+  new_list.updateItem(event.target.parentNode.id, event.target.value);
 }, true);
 
 showDate();
