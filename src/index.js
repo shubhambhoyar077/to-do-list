@@ -41,7 +41,10 @@ new_todo_list.displayList();
 addItem.addEventListener('keypress', (event) => {
   if(event.key === 'Enter'){
     event.preventDefault();
-    new_todo_list.addItem(addItem.value);
+    if(addItem.value){
+      new_todo_list.addItem(addItem.value);
+    }
+    addItem.value = "";
   }
 });
 
