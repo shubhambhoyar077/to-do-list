@@ -8,6 +8,7 @@ export default class ToDoList {
   }
 
   displayList() {
+    renderList(0, true);
     this.toDoList.forEach((element) => {
       renderList(element);
     });
@@ -32,7 +33,6 @@ export default class ToDoList {
   deleteItem(index) {
     this.toDoList.splice(index, 1);
     this.updateIndex();
-    ulList.innerHTML = '';
     this.displayList();
   }
 
@@ -51,7 +51,6 @@ export default class ToDoList {
   clearCompleted() {
     this.toDoList = this.toDoList.filter((element) => !element.completed);
     this.updateIndex();
-    ulList.innerHTML = '';
     this.displayList();
   }
 
