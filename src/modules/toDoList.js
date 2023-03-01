@@ -1,4 +1,4 @@
-import { renderList, ulList } from './displayList';
+import { renderList } from './displayList';
 import Storage from './storage';
 
 export default class ToDoList {

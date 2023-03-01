@@ -1,8 +1,8 @@
 const ulList = document.getElementById('list-items');
-const renderList = (listItem, renderAgain=false) => {
+const renderList = (listItem, renderAgain = false) => {
   const ulList = document.getElementById('list-items');
-  if(renderAgain){
-    ulList.innerHTML = "";
+  if (renderAgain) {
+    ulList.innerHTML = '';
   }
   let completedCls = '';
   let checkbox = '';
@@ -10,7 +10,7 @@ const renderList = (listItem, renderAgain=false) => {
     completedCls = "class='completed'";
     checkbox = 'checked';
   }
-  if(listItem){
+  if (listItem) {
     ulList.innerHTML += `
             <li class="common-padding">
               <input id='checkbox' type="checkbox" ${checkbox}>
